@@ -1,5 +1,17 @@
 import random
 
+def input_int(mensaje):
+    while True:
+        valor = input(mensaje)
+        try:
+            numero = int(valor)
+            if numero > 0:
+                return numero
+            else:
+                print("Por favor ingresar un numero positivo mayor a 0")
+        except ValueError:
+            print("Este número no es válido, por favor ingresar un numero positivo mayor a 0.")
+
 def input_dificultad(mensaje):
     while True:
         dificultad = input(mensaje).lower()
@@ -25,7 +37,7 @@ while True:
     print(f"Adivina el nUmero entre 1 y {limite}.")
     
     while intentos > 0:
-        jugada = int(input(f"Intentos que te quedan: {intentos}. Número: "))
+        jugada = input_int(f"Intentos que te quedan: {intentos}. Número: ")
         lista_actual.append(jugada) 
         
         if jugada == numero_secreto:
