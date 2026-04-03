@@ -1,11 +1,21 @@
 import random
+
+def input_dificultad(mensaje):
+    while True:
+        dificultad = input(mensaje).lower()
+        if dificultad in ("facil", "medio", "dificil"):
+            return dificultad
+
+        else:
+            print("Las dificultades validas son 'facil', 'medio', 'dificil'")
+
+
 niveles = {'facil': 10, 'medio': 20, 'dificil': 50}
 historial_global = []
 while True:
     print("\n--- ADIVINA EL NUMERO SECRETO ---")
-    opcion = input("Elige nivel (facil, medio, dificil): ").lower()
+    opcion = input_dificultad("Elige nivel (facil, medio, dificil): ").lower()
     
-    #por si el jugador coloca una opcion que no esta en el menu lo colocara directamente al nivel medio
     limite = niveles.get(opcion, 20)
     numero_secreto = random.randint(1, limite)
     
