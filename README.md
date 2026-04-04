@@ -9,3 +9,11 @@ El jugador cuenta con un maximo de 5 intentos por partida.
 El sistema almacena todos los numeros ingresados durante el juego.
 
 Utilice  diccionarios para manejar opciones no validas por defecto.
+
+Desarrollado por: Grupo C
+
+Yoel Coriat
+
+Maryane Holt
+
+Jose De Gracia
