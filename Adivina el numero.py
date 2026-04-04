@@ -36,18 +36,19 @@ while True:
     
     print(f"Adivina el nUmero entre 1 y {limite}.")
     
-    while intentos > 0:
-        jugada = input_int(f"Intentos que te quedan: {intentos}. Número: ")
-        lista_actual.append(jugada) 
-        
-        if jugada == numero_secreto:
-            print("¡Eres todo un Ganador!")
-            break
-        elif jugada < numero_secreto:
-            print("El numero es Mayor.")
-        else:
-            print("El numero es Menor.")
-        intentos -= 1
+while intentos > 0:
+    jugada = input_int(f"Intentos que te quedan: {intentos}. Número: ")
+    lista_actual.append(jugada) 
+    
+    if jugada == numero_secreto:
+        print("¡Eres todo un Ganador!")
+        print(f"Ganaste en {6 - intentos} intentos.")
+        break
+    elif jugada < numero_secreto:
+        print("El numero es Mayor.")
+    else:
+        print("El numero es Menor.")
+    intentos -= 1
         
     if intentos == 0:
         print(f"Perdedor. El numero era {numero_secreto}")
